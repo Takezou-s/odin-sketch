@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dcf3f5;
+  font-family: "Roboto", sans-serif;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin: 2vmin auto;
+  gap: 2vmin;
+  width: 98vmin;
+  height: 96vmin;
+}
+
+header {
+  text-align: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 24vmin 50vmin;
+  grid-template-rows: 50vmin;
+  flex: 1;
+}
+
+.properties {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  /* justify-content: space-between; */
+  gap: 12px;
+  align-items: stretch;
+  position: relative;
+  right: 50px;
+}
+
+.color-picker {
+  /* border: 1px solid #000; */
+  width: 64px;
+  height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.color-picker > input {
+  width: 80px;
+  position: relative;
+  height: 80px;
+  left: -8px;
+  top: -8px;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.container {
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-self: stretch;
+}
+
+.toggle-button {
+  background-color: transparent;
+  border: 1px solid #2d4356;
+  padding: 10px 24px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.toggle-button.active {
+  background-color: #2d4356;
+  color: white;
+  font-weight: 400;
+}
+
+.scale-transition {
+  transition: transform 0.2s ease;
+}
+
+.scale-transition:hover {
+  transform: scale(1.15);
+}
+
+.align-self-center {
+  align-self: center;
+}

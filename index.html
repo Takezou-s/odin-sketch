@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="favicon-96x96.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <h1 style="font-size: 4.5rem">Sketch</h1>
+      </header>
+      <div class="main">
+        <div class="properties">
+          <div class="color-picker align-self-center scale-transition">
+            <input type="color" value="#000" />
+          </div>
+          <button class="toggle-button active scale-transition" data-mode="picked">Picked color</button>
+          <button class="toggle-button scale-transition" data-mode="random">Random color</button>
+          <button class="toggle-button scale-transition" data-mode="erase">Erase</button>
+          <button class="toggle-button scale-transition" data-mode="darker">Darker</button>
+          <button class="toggle-button scale-transition" data-mode="brighter">Brighter</button>
+          <button id="clearButton" class="toggle-button scale-transition">Clear</button>
+
+          <h2 id="gridSize" class="align-self-center">16 x 16</h2>
+          <input
+            id="gridSizeSlider"
+            class="scale-transition"
+            type="range"
+            name="myInput"
+            step="1"
+            min="1"
+            value="16"
+            max="100"
+            required
+          />
+        </div>
+        <div class="container" draggable="false"></div>
+      </div>
+    </div>
+  </body>
+</html>
